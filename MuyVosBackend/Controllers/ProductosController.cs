@@ -26,7 +26,7 @@ namespace MuyVosBackend.Controllers
         {
             try
             {
-                var listProductos = await _context.Producto.ToListAsync();
+                var listProductos = await _context.Productos.ToListAsync();
                 return Ok(listProductos);
             }
             catch (Exception ex)
@@ -42,7 +42,7 @@ namespace MuyVosBackend.Controllers
         {
             try
             {
-                var producto = await _context.Producto.FindAsync(id);
+                var producto = await _context.Productos.FindAsync(id);
                 if(producto == null)
                 {
                     return NotFound();
@@ -100,14 +100,14 @@ namespace MuyVosBackend.Controllers
         {
             try
             {
-                var producto = await _context.Producto.FindAsync(id);
+                var producto = await _context.Productos.FindAsync(id);
 
                 if (producto == null)
                 {
                     return NotFound();
                 }
 
-                _context.Producto.Remove(producto);
+                _context.Productos.Remove(producto);
                 await _context.SaveChangesAsync();
                 return Ok(new { message = "Producto eliminado" });
             }
