@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MuyVosBackend"
+    "\\MuyVosBackend",
+    "\\MuyVosBackend\\Controllers",
+    "\\MuyVosBackend\\Models"
   ],
   "SelectedNode": "\\MuyVosBackend.sln",
   "PreviewInSolutionExplorer": false
