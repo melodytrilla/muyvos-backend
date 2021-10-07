@@ -18,7 +18,7 @@ namespace MuyVosBackend.Controllers
             _context = context;
         }
         // GET: api/<UsuariosController>
-        [HttpGet]
+        [HttpGet("GetUsuarios")]
         public async Task<IActionResult> Get()
         {
             try

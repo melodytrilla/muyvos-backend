@@ -19,7 +19,7 @@ namespace MuyVosBackend.Controllers
             _context = context;
         }
         // GET: api/<VentasController>
-        [HttpGet]
+        [HttpGet("GetVentas")]
         public async Task<IActionResult> Get()
         {
             try
@@ -35,7 +35,7 @@ namespace MuyVosBackend.Controllers
         }
 
         // POST api/<VentasController>
-        [HttpPost]
+        [HttpPost("PostVenta")]
         public async Task<IActionResult> Post([FromBody] Venta venta)
         {
             try
@@ -52,7 +52,7 @@ namespace MuyVosBackend.Controllers
         }
 
         // PUT api/<VentasController>/5
-        [HttpPut("{id}")]
+        [HttpPut("UpdateVenta/{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] Venta venta)
         {
             try
@@ -73,7 +73,7 @@ namespace MuyVosBackend.Controllers
         }
 
         // DELETE api/<VentasController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteVenta/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             try

@@ -11,6 +11,13 @@ namespace MuyVosBackend.Models
         public int Id { get; set; }
         [Required]
         public DateTime Fecha { get; set; }
+        public List<Item> Items { get; set; }
+        public decimal Total { get; set; }
+    }
+
+    public class Item
+    {
+        public int Id { get; set; }
         [Required]
         public int Id_producto { get; set; }
         [Required]
